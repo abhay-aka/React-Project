@@ -13,6 +13,6 @@ const heading2 = React.createElement('h2', {
 const mainDiv = React.createElement('div', {
     id: 'main_div'
 }, [heading1, heading2]);
-
+console.log('hello')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(mainDiv);
