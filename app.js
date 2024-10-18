@@ -1,18 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
-const heading1 = React.createElement('h1', {
-    id: "heading1",
-    key: "heading1" // Add a unique key for this element
-}, 'hello world');
+import Body from "./src/Components/Body"
+import Footer from "./src/Components/Footer";
+import Title from "./src/Components/Title";
+import Contacts from "./src/Components/Contact"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const heading2 = React.createElement('h2', {
-    id: 'heading2',
-    key: "heading2" // Add a unique key for this element
-}, 'this is new react project');
-
-const mainDiv = React.createElement('div', {
-    id: 'main_div'
-}, [heading1, heading2]);
-console.log('hello')
+const AppLayout = () => {
+    return (
+        <>
+            <Title />
+            <Body />
+            <Footer />
+        </>
+    );
+}
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout />
+    },
+    {
+        path: "/contacts",
+        element: <Contacts />
+    }
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(mainDiv);
+root.render(<RouterProvider router={appRouter}/>);
