@@ -2961,31 +2961,50 @@ var _body = require("./src/Components/Body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
 var _footer = require("./src/Components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
-var _title = require("./src/Components/Title");
-var _titleDefault = parcelHelpers.interopDefault(_title);
 var _contact = require("./src/Components/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
+var _photoGallery = require("./src/Components/PhotoGallery");
+var _photoGalleryDefault = parcelHelpers.interopDefault(_photoGallery);
+var _commentSection = require("./src/Components/CommentSection");
+var _commentSectionDefault = parcelHelpers.interopDefault(_commentSection);
+var _calculator = require("./src/Components/Calculator");
+var _calculatorDefault = parcelHelpers.interopDefault(_calculator);
+var _todoList = require("./src/Components/TodoList");
+var _todoListDefault = parcelHelpers.interopDefault(_todoList);
+var _navbar = require("./src/Components/Navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
 var _reactRouterDom = require("react-router-dom");
 const AppLayout = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "min-h-screen flex flex-col",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _titleDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 10,
-                columnNumber: 13
+                lineNumber: 14,
+                columnNumber: 9
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                    fileName: "app.js",
+                    lineNumber: 16,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 11,
-                columnNumber: 13
+                lineNumber: 15,
+                columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 12,
-                columnNumber: 13
+                lineNumber: 18,
+                columnNumber: 9
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "app.js",
+        lineNumber: 13,
+        columnNumber: 10
+    }, undefined);
 };
 _c = AppLayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
@@ -2993,17 +3012,51 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "app.js",
-            lineNumber: 17,
+            lineNumber: 23,
             columnNumber: 12
-        }, undefined)
-    },
-    {
-        path: "/contacts",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
-            fileName: "app.js",
-            lineNumber: 20,
-            columnNumber: 12
-        }, undefined)
+        }, undefined),
+        children: [
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "app.js",
+                    lineNumber: 26,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "gallery",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _photoGalleryDefault.default), {}, void 0, false, {
+                    fileName: "app.js",
+                    lineNumber: 29,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "calc",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _calculatorDefault.default), {}, void 0, false, {
+                    fileName: "app.js",
+                    lineNumber: 32,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "todo",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoListDefault.default), {}, void 0, false, {
+                    fileName: "app.js",
+                    lineNumber: 35,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "comments",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _commentSectionDefault.default), {}, void 0, false, {
+                    fileName: "app.js",
+                    lineNumber: 38,
+                    columnNumber: 14
+                }, undefined)
+            }
+        ]
     }
 ]);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
@@ -3011,7 +3064,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "app.js",
-    lineNumber: 23,
+    lineNumber: 42,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3022,7 +3075,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./src/Components/Body":"6J35F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/Components/Footer":"eUZ6J","./src/Components/Title":"3cUdb","./src/Components/Contact":"66EYZ","react-router-dom":"9xmpe"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./src/Components/Body":"6J35F","./src/Components/Footer":"eUZ6J","./src/Components/Contact":"66EYZ","./src/Components/PhotoGallery":"cStnc","./src/Components/CommentSection":"4qzDX","./src/Components/Calculator":"godoi","./src/Components/TodoList":"5QK6U","./src/Components/Navbar":"hzwOG","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27278,7 +27331,9 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _projectList = require("./ProjectList");
 var _projectListDefault = parcelHelpers.interopDefault(_projectList);
 const Body = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _projectListDefault.default), {}, void 0, false, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "This is body"
+    }, void 0, false, {
         fileName: "src/Components/Body.js",
         lineNumber: 3,
         columnNumber: 10
@@ -27560,76 +27615,350 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3cUdb":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d01b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"66EYZ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$84fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d01b.prelude(module);
+$parcel$ReactRefreshHelpers$84fc.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Contacts = ()=>{
+    const alertUser = (event)=>{
+        event.preventDefault(); // Prevents the form from submitting
+        console.log("Mail Sent Successfully.");
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Contact Us"
+            }, void 0, false, {
+                fileName: "src/Components/Contact.js",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                    onSubmit: alertUser,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "name",
+                            children: "Enter your Name:"
+                        }, void 0, false, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 13,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            id: "name",
+                            name: "name"
+                        }, void 0, false, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 14,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "email",
+                            children: "Enter your Email:"
+                        }, void 0, false, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 16,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "email",
+                            id: "email",
+                            name: "email"
+                        }, void 0, false, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 17,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "subject",
+                            children: "Subject:"
+                        }, void 0, false, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 19,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
+                            id: "subject",
+                            name: "subject",
+                            placeholder: "Write something.."
+                        }, void 0, false, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 20,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "submit",
+                            value: "Submit"
+                        }, void 0, false, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 22,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/Components/Contact.js",
+                    lineNumber: 12,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/Components/Contact.js",
+                lineNumber: 11,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Components/Contact.js",
+        lineNumber: 7,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Contacts;
+exports.default = Contacts;
+var _c;
+$RefreshReg$(_c, "Contacts");
+
+  $parcel$ReactRefreshHelpers$84fc.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cStnc":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$45e9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$45e9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const PhotoGallery = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "PhotoGallery"
+    }, void 0, false, {
+        fileName: "src/Components/PhotoGallery.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = PhotoGallery;
+exports.default = PhotoGallery;
+var _c;
+$RefreshReg$(_c, "PhotoGallery");
+
+  $parcel$ReactRefreshHelpers$45e9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4qzDX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f772 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f772.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const CommentSection = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "CommentSection"
+    }, void 0, false, {
+        fileName: "src/Components/CommentSection.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = CommentSection;
+exports.default = CommentSection;
+var _c;
+$RefreshReg$(_c, "CommentSection");
+
+  $parcel$ReactRefreshHelpers$f772.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"godoi":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e11b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e11b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Calculator = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Calculator"
+    }, void 0, false, {
+        fileName: "src/Components/Calculator.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Calculator;
+exports.default = Calculator;
+var _c;
+$RefreshReg$(_c, "Calculator");
+
+  $parcel$ReactRefreshHelpers$e11b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5QK6U":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5a9d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5a9d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const TodoList = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "TodoList"
+    }, void 0, false, {
+        fileName: "src/Components/TodoList.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = TodoList;
+exports.default = TodoList;
+var _c;
+$RefreshReg$(_c, "TodoList");
+
+  $parcel$ReactRefreshHelpers$5a9d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hzwOG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$83db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$83db.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
-const Title = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            style: {
-                display: "flex",
-                justifyContent: "space-between"
-            },
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    id: "app-title",
-                    children: "Prepare React."
-                }, "app-title", false, {
-                    fileName: "src/Components/Title.js",
-                    lineNumber: 8,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        style: {
-                            listStyleType: "none",
-                            padding: 0
-                        },
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/contacts",
-                            children: "Contact"
+const Navbar = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex justify-between b",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "",
+                children: "React Mini Project"
+            }, void 0, false, {
+                fileName: "src/Components/Navbar.js",
+                lineNumber: 4,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/todo",
+                                children: "Todo List"
+                            }, void 0, false, {
+                                fileName: "src/Components/Navbar.js",
+                                lineNumber: 7,
+                                columnNumber: 21
+                            }, undefined)
                         }, void 0, false, {
-                            fileName: "src/Components/Title.js",
-                            lineNumber: 15,
-                            columnNumber: 12
+                            fileName: "src/Components/Navbar.js",
+                            lineNumber: 7,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/calc",
+                                children: "Calculator"
+                            }, void 0, false, {
+                                fileName: "src/Components/Navbar.js",
+                                lineNumber: 8,
+                                columnNumber: 21
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/Components/Navbar.js",
+                            lineNumber: 8,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/gallery",
+                                children: "Gallery"
+                            }, void 0, false, {
+                                fileName: "src/Components/Navbar.js",
+                                lineNumber: 9,
+                                columnNumber: 21
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/Components/Navbar.js",
+                            lineNumber: 9,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/comments",
+                                children: "CommentSection"
+                            }, void 0, false, {
+                                fileName: "src/Components/Navbar.js",
+                                lineNumber: 10,
+                                columnNumber: 21
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/Components/Navbar.js",
+                            lineNumber: 10,
+                            columnNumber: 17
                         }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/Components/Title.js",
-                        lineNumber: 12,
-                        columnNumber: 21
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/Components/Title.js",
-                    lineNumber: 11,
-                    columnNumber: 17
+                    ]
+                }, void 0, true, {
+                    fileName: "src/Components/Navbar.js",
+                    lineNumber: 6,
+                    columnNumber: 13
                 }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/Components/Title.js",
-            lineNumber: 4,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false);
+            }, void 0, false, {
+                fileName: "src/Components/Navbar.js",
+                lineNumber: 5,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Components/Navbar.js",
+        lineNumber: 3,
+        columnNumber: 10
+    }, undefined);
 };
-_c = Title;
-exports.default = Title;
+_c = Navbar;
+exports.default = Navbar;
 var _c;
-$RefreshReg$(_c, "Title");
+$RefreshReg$(_c, "Navbar");
 
-  $parcel$ReactRefreshHelpers$d01b.postlude(module);
+  $parcel$ReactRefreshHelpers$83db.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"9xmpe":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-router-dom":"9xmpe","react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.27.0
  *
@@ -34791,123 +35120,6 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"66EYZ":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$84fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$84fc.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-const Contacts = ()=>{
-    const alertUser = (event)=>{
-        event.preventDefault(); // Prevents the form from submitting
-        console.log("Mail Sent Successfully.");
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Contact Us"
-            }, void 0, false, {
-                fileName: "src/Components/Contact.js",
-                lineNumber: 8,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                    onSubmit: alertUser,
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            htmlFor: "name",
-                            children: "Enter your Name:"
-                        }, void 0, false, {
-                            fileName: "src/Components/Contact.js",
-                            lineNumber: 13,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            type: "text",
-                            id: "name",
-                            name: "name"
-                        }, void 0, false, {
-                            fileName: "src/Components/Contact.js",
-                            lineNumber: 14,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            htmlFor: "email",
-                            children: "Enter your Email:"
-                        }, void 0, false, {
-                            fileName: "src/Components/Contact.js",
-                            lineNumber: 16,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            type: "email",
-                            id: "email",
-                            name: "email"
-                        }, void 0, false, {
-                            fileName: "src/Components/Contact.js",
-                            lineNumber: 17,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            htmlFor: "subject",
-                            children: "Subject:"
-                        }, void 0, false, {
-                            fileName: "src/Components/Contact.js",
-                            lineNumber: 19,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
-                            id: "subject",
-                            name: "subject",
-                            placeholder: "Write something.."
-                        }, void 0, false, {
-                            fileName: "src/Components/Contact.js",
-                            lineNumber: 20,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            type: "submit",
-                            value: "Submit"
-                        }, void 0, false, {
-                            fileName: "src/Components/Contact.js",
-                            lineNumber: 22,
-                            columnNumber: 21
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/Components/Contact.js",
-                    lineNumber: 12,
-                    columnNumber: 17
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/Components/Contact.js",
-                lineNumber: 11,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/Components/Contact.js",
-        lineNumber: 7,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Contacts;
-exports.default = Contacts;
-var _c;
-$RefreshReg$(_c, "Contacts");
-
-  $parcel$ReactRefreshHelpers$84fc.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}]},["hPIHA","1xC6H","igcvL"], "igcvL", "parcelRequiredd69")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hPIHA","1xC6H","igcvL"], "igcvL", "parcelRequiredd69")
 
 //# sourceMappingURL=index.5baa4167.js.map

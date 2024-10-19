@@ -1,1 +1,1 @@
-{"mappings":"AAAA","sources":["index.css"],"sourcesContent":["#main_div {\n    color: red\n}"],"names":[],"version":3,"file":"index.9e4c6fd2.css.map","sourceRoot":"/__parcel_source_root/"}
+{"mappings":"AAAA;;AACA;;AACA","sources":["index.css"],"sourcesContent":["@tailwind base;\n@tailwind components;\n@tailwind utilities;"],"names":[],"version":3,"file":"index.9e4c6fd2.css.map","sourceRoot":"/__parcel_source_root/"}
