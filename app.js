@@ -13,7 +13,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
     return (
-    <div className="min-h-screen flex flex-col">
+    <div className="">
         <Navbar />
         <main>
           <Outlet />

@@ -2976,7 +2976,7 @@ var _navbarDefault = parcelHelpers.interopDefault(_navbar);
 var _reactRouterDom = require("react-router-dom");
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "min-h-screen flex flex-col",
+        className: "",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
                 fileName: "app.js",
@@ -27861,18 +27861,27 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 const Navbar = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex justify-between b",
+        className: "flex justify-between items-center bg-red-100 p-4",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "",
-                children: "React Mini Project"
+                className: "text-lg font-bold",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    to: "/",
+                    children: "React Mini Projects"
+                }, void 0, false, {
+                    fileName: "src/Components/Navbar.js",
+                    lineNumber: 4,
+                    columnNumber: 42
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Navbar.js",
                 lineNumber: 4,
-                columnNumber: 9
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-end",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "flex space-x-4",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27881,12 +27890,12 @@ const Navbar = ()=>{
                             }, void 0, false, {
                                 fileName: "src/Components/Navbar.js",
                                 lineNumber: 7,
-                                columnNumber: 21
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Navbar.js",
                             lineNumber: 7,
-                            columnNumber: 17
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27895,12 +27904,12 @@ const Navbar = ()=>{
                             }, void 0, false, {
                                 fileName: "src/Components/Navbar.js",
                                 lineNumber: 8,
-                                columnNumber: 21
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Navbar.js",
                             lineNumber: 8,
-                            columnNumber: 17
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27909,37 +27918,37 @@ const Navbar = ()=>{
                             }, void 0, false, {
                                 fileName: "src/Components/Navbar.js",
                                 lineNumber: 9,
-                                columnNumber: 21
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Navbar.js",
                             lineNumber: 9,
-                            columnNumber: 17
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/comments",
-                                children: "CommentSection"
+                                children: "Comment Section"
                             }, void 0, false, {
                                 fileName: "src/Components/Navbar.js",
                                 lineNumber: 10,
-                                columnNumber: 21
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Navbar.js",
                             lineNumber: 10,
-                            columnNumber: 17
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Navbar.js",
                     lineNumber: 6,
-                    columnNumber: 13
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Navbar.js",
                 lineNumber: 5,
-                columnNumber: 9
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
