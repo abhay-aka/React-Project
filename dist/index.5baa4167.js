@@ -27742,15 +27742,70 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _photo = require("./Photo"); // Import the new Photo component
+var _photoDefault = parcelHelpers.interopDefault(_photo);
+var _s = $RefreshSig$();
+const unsplashAccessKey = "tQacSOMgekYJy8xygJ9ke7TvmMJNB4SEadz4hQoS3DY";
 const PhotoGallery = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "PhotoGallery"
-    }, void 0, false, {
+    _s();
+    const [images, setImages] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        async function fetchImages() {
+            try {
+                const query = "nature"; // The search term
+                const perPage = 12; // Number of items per page (12 in this case)
+                const page = 1; // Page number
+                const orderBy = "latest"; // Sort by latest
+                const url = `https://api.unsplash.com/photos/?client_id=${unsplashAccessKey}&query=${query}&per_page=${perPage}&page=${page}&order_by=${orderBy}`;
+                const imageData = await fetch(url, {
+                    method: "GET"
+                });
+                const data = await imageData.json();
+                return data;
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        const results = fetchImages();
+        results.then((result)=>{
+            if (result) setImages(result);
+        });
+    }, []);
+    return images.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/Components/PhotoGallery.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
+        lineNumber: 33,
+        columnNumber: 32
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Photo Gallery"
+            }, void 0, false, {
+                fileName: "src/Components/PhotoGallery.js",
+                lineNumber: 34,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-wrap  justify-evenly",
+                children: images.map((image)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _photoDefault.default), {
+                        src: image?.urls?.small,
+                        alt: image?.alt_description
+                    }, image.id, false, {
+                        fileName: "src/Components/PhotoGallery.js",
+                        lineNumber: 36,
+                        columnNumber: 30
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/Components/PhotoGallery.js",
+                lineNumber: 35,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
 };
+_s(PhotoGallery, "ScKwoilS3xNJP1q5r1COmrAdDIM=");
 _c = PhotoGallery;
 exports.default = PhotoGallery;
 var _c;
@@ -27761,7 +27816,76 @@ $RefreshReg$(_c, "PhotoGallery");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4qzDX":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Shimmer":"c7s09","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Photo":"ezsDq"}],"c7s09":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5bd8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5bd8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        className: "bold",
+        children: "DATA LOADING"
+    }, void 0, false, {
+        fileName: "src/Components/Shimmer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$5bd8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ezsDq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$282b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$282b.prelude(module);
+
+try {
+// Photo.js
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Photo = ({ src, alt })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "h-50 w-50 py-10 overflow-hidden",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            src: src,
+            alt: alt,
+            className: "h-full w-full object-cover"
+        }, void 0, false, {
+            fileName: "src/Components/Photo.js",
+            lineNumber: 8,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/Components/Photo.js",
+        lineNumber: 6,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Photo;
+exports.default = Photo;
+var _c;
+$RefreshReg$(_c, "Photo");
+
+  $parcel$ReactRefreshHelpers$282b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4qzDX":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f772 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27967,7 +28091,7 @@ $RefreshReg$(_c, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-router-dom":"9xmpe","react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.27.0
  *

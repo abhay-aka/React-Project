@@ -63,6 +63,8 @@
 
 html, :host {
   -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
   tab-size: 4;
   font-feature-settings: normal;
   font-variation-settings: normal;
@@ -93,7 +95,6 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: inherit;
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -168,11 +169,7 @@ progress {
   vertical-align: baseline;
 }
 
-::-webkit-inner-spin-button {
-  height: auto;
-}
-
-::-webkit-outer-spin-button {
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -221,12 +218,7 @@ textarea {
   resize: vertical;
 }
 
-input::-moz-placeholder {
-  opacity: 1;
-  color: #9ca3af;
-}
-
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   color: #9ca3af;
 }
