@@ -27895,15 +27895,118 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 const CommentSection = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "CommentSection"
-    }, void 0, false, {
+    _s();
+    const [inputValue, setInputValue] = (0, _react.useState)("");
+    const [notes, setNotes] = (0, _react.useState)([]);
+    sessionStorage.setItem("notes", JSON.stringify(notes));
+    function addNotes(event) {
+        event.preventDefault(); // Prevent form submission from refreshing the page
+        if (inputValue.trim()) {
+            setNotes([
+                ...notes,
+                inputValue
+            ]); // Add the current inputValue to notes
+            setInputValue(""); // Clear the input field
+        }
+    }
+    function deleteNote(index) {
+        console.log(index);
+        setNotes(notes.filter((note, ind)=>ind != index));
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "bg-gray-50 min-h-screen flex flex-col items-center py-10",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-2xl font-bold text-gray-800 mb-6",
+                children: "Add Comment"
+            }, void 0, false, {
+                fileName: "src/Components/CommentSection.js",
+                lineNumber: 18,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "w-full max-w-md",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                        className: "flex items-center space-x-3 mb-6",
+                        onSubmit: addNotes,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                className: "w-full bg-white placeholder-gray-400 text-gray-900 text-sm border border-gray-300 rounded-lg px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition",
+                                type: "text",
+                                placeholder: "Type your comment...",
+                                value: inputValue,
+                                onChange: (e)=>setInputValue(e.target.value)
+                            }, void 0, false, {
+                                fileName: "src/Components/CommentSection.js",
+                                lineNumber: 21,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none transition",
+                                type: "submit",
+                                children: "Add"
+                            }, void 0, false, {
+                                fileName: "src/Components/CommentSection.js",
+                                lineNumber: 22,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/CommentSection.js",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        className: "space-y-4",
+                        children: notes.map((note, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: "flex justify-between items-center bg-white p-4 rounded-lg shadow-sm border border-gray-200",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "text-gray-700",
+                                        children: note
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CommentSection.js",
+                                        lineNumber: 29,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "text-red-600 hover:text-red-700 focus:outline-none transition",
+                                        onClick: ()=>deleteNote(index),
+                                        children: "Delete"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CommentSection.js",
+                                        lineNumber: 30,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, index, true, {
+                                fileName: "src/Components/CommentSection.js",
+                                lineNumber: 28,
+                                columnNumber: 39
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/Components/CommentSection.js",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/CommentSection.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/Components/CommentSection.js",
-        lineNumber: 2,
+        lineNumber: 17,
         columnNumber: 10
     }, undefined);
 };
+_s(CommentSection, "C93hI/t71aah4jbRdwDoos+0Z3A=");
 _c = CommentSection;
 exports.default = CommentSection;
 var _c;
@@ -27914,7 +28017,7 @@ $RefreshReg$(_c, "CommentSection");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"godoi":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"godoi":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e11b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
