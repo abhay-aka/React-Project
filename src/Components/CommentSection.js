@@ -9,7 +9,7 @@ const CommentSection = () => {
     if (inputValue.trim()) {
     
       setNotes([...notes, inputValue]); // Add the current inputValue to notes
-      setInputValue(''); // Clear the input field
+      setInputValue(''); // Clear input field
     }
   }
 
